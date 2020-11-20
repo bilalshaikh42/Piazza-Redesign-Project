@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "projects": {
+    "piazza": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/piazza",
+      "sourceRoot": "apps/piazza/src",
+      "prefix": "piazza",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/piazza",
+            "index": "apps/piazza/src/index.html",
+            "main": "apps/piazza/src/main.ts",
+            "polyfills": "apps/piazza/src/polyfills.ts",
+            "tsConfig": "apps/piazza/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/piazza/src/favicon.ico", "apps/piazza/src/assets"],
+            "styles": ["apps/piazza/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/piazza/src/environments/environment.ts",
+                  "with": "apps/piazza/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "piazza:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "piazza:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "piazza:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/piazza/src/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/piazza/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "piazza-e2e": {
+      "root": "apps/piazza-e2e",
+      "sourceRoot": "apps/piazza-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/piazza-e2e/cypress.json",
+            "tsConfig": "apps/piazza-e2e/tsconfig.e2e.json",
+            "devServerTarget": "piazza:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "piazza:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/piazza-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "piazza"
+}
