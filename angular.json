@@ -22,7 +22,7 @@
             "tsConfig": "apps/piazza/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/piazza/src/favicon.ico", "apps/piazza/src/assets"],
-            "styles": ["apps/piazza/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/piazza/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
