@@ -1,17 +1,26 @@
 .sidenav-container {
   height: 100%;
+  overflow: hidden;
 }
 
 .sidenav {
   width: 200px;
+  overflow-x: hidden;
 }
 
 .sidenav .mat-toolbar {
-  background: inherit;
+  background: accent;
+  color: accent;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  position: relative;
+  overflow: unset;
+  overflow: hidden !important;
 }
