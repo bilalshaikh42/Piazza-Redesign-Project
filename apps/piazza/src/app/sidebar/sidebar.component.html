@@ -2,11 +2,11 @@
 <mat-toolbar class="topbar" fxLayout="column">
  
 <button  mat-raised-button class="overviewButton item padTop" routerLink=".."> All Classes </button>
-<button  mat-raised-button class="overviewButton item " routerLink="."> Class Home </button>
-
+<button *ngIf="id" mat-raised-button class="overviewButton item " routerLink="." (click)="id=null"> Class Home </button>
+<button mat-raised-button class="overviewButton"> Filter <mat-icon> filter_alt</mat-icon></button>
 </mat-toolbar>
 
 <div *ngFor="let count of counts" class="list" >
-    <mat-card class="item" routerLink={{count}}>  Post # {{count}}</mat-card>
+    <mat-card class="item" routerLink={{count}} (click)="this.id=count">  Post # {{count}}</mat-card>
 </div>
 </div>
