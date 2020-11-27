@@ -1,0 +1,30 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+}
+.list {
+  padding: 0.3rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+.overviewButton {
+  width: 100%;
+  display: block;
+}
+.topbar {
+  :host {
+    padding: 0;
+  }
+  height: fit-content;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+}
+.padTop {
+  margin-top: 1rem;
+}

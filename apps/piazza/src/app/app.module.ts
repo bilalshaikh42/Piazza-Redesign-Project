@@ -19,6 +19,11 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FullPageComponent } from './full-page/full-page.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ClassComponent } from './class/class.component';
+import { PostComponent } from './post/post.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +33,9 @@ import { FullPageComponent } from './full-page/full-page.component';
     OverviewComponent,
     HomeComponent,
     FullPageComponent,
+    SidebarComponent,
+    ClassComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +50,7 @@ import { FullPageComponent } from './full-page/full-page.component';
     RouterModule,
     MatCardModule,
     AppRoutingModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

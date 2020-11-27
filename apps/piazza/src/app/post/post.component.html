@@ -1,0 +1,12 @@
+<div class="post">
+    <mat-card>
+<mat-card-title class="center"> Post {{postName | async}} </mat-card-title>
+<mat-card-content> This is the text content for post {{postName | async}}</mat-card-content>
+<mat-card-actions fxLayout="row" fxLayoutAlign="space-between"> 
+<mat-slide-toggle> Resolved</mat-slide-toggle>
+<div> <button mat-button> Reply</button>
+<button mat-button> Mark as Read</button></div>
+</mat-card-actions>
+
+</mat-card>
+</div>

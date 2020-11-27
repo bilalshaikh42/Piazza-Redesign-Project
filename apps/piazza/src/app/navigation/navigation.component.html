@@ -22,8 +22,8 @@
     </mat-nav-list>
     </div>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
+  <mat-sidenav-content class="full-height">
+    <mat-toolbar color="primary" class="topbar">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="!drawer.opened">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
@@ -31,7 +31,10 @@
       <img src="assets/piazza_logo.png" />
     </mat-toolbar>
     <!-- Add Content Here -->
+    <div class="content">
     <ng-content></ng-content>
-   
+   </div>
+  <piazza-footer class="footer"></piazza-footer>
   </mat-sidenav-content>
+  
 </mat-sidenav-container>

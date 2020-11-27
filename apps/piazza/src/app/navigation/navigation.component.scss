@@ -6,6 +6,7 @@
 .sidenav {
   width: 200px;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .sidenav .mat-toolbar {
@@ -23,4 +24,19 @@
   position: relative;
   overflow: unset;
   overflow: hidden !important;
+}
+
+.content {
+  height: 90%;
+}
+.topbar {
+  height: 5%;
+}
+.footer {
+  height: 5%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

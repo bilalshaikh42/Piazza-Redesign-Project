@@ -1,0 +1,12 @@
+<div class="sidebar">
+<mat-toolbar class="topbar" fxLayout="column">
+ 
+<button  mat-raised-button class="overviewButton item padTop" routerLink=".."> All Classes </button>
+<button  mat-raised-button class="overviewButton item " routerLink="."> Class Home </button>
+
+</mat-toolbar>
+
+<div *ngFor="let count of counts" class="list" >
+    <mat-card class="item" routerLink={{count}}>  Post # {{count}}</mat-card>
+</div>
+</div>
