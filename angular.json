@@ -21,7 +21,7 @@
             "polyfills": "apps/piazza/src/polyfills.ts",
             "tsConfig": "apps/piazza/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/piazza/src/favicon.ico", "apps/piazza/src/assets"],
+            "assets": ["apps/piazza/src/favicon.ico", "apps/piazza/src/_redirects","apps/piazza/src/assets"],
             "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/piazza/src/styles.scss"],
             "scripts": []
           },
