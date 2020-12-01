@@ -1,0 +1,14 @@
+<h2> Select the Categories you want to filter by:</h2>
+<mat-chip-list #list fxLayout="row overlap" fxLayoutAlign="space-around" multiple="true">
+
+    <mat-chip #item [selectable]="true" [removable]="true" [selected]="chip.select" disableRipple="true"
+        class="filter" *ngFor="let chip of chips; index as i" (click)="toggleSelect(i)" >
+        {{chip.name}}
+    </mat-chip>
+
+</mat-chip-list>
+
+<div class="closePad" fxLayout= "row" fxLayoutAlign="space-between">
+    <div fxFill></div>
+    <button  fxItem class=close mat-raised-button (click)=close()> Done</button>
+</div>

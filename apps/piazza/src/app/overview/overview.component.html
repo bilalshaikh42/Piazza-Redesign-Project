@@ -2,16 +2,10 @@
 <h1 class="title">Class Overview</h1>
 
 <div fxLayout="row" fxLayoutAlign="space-around start" fxLayout.lt-md="column center" fxLayoutAlign.lt-md="space-around center" fxLayoutGap="20px">
-    <mat-card fxFlex>
-        <h2> Pinned Posts</h2>
-    </mat-card>
-    <mat-card fxFlex>
-        <h2> Your Posts</h2>
-    </mat-card>
-    <mat-card fxFlex>
-        <h2>Popular Posts</h2>
-    </mat-card>
 
+    <piazza-column fxFlex heading="Pinned Posts" flag="Pinned"></piazza-column>
+    <piazza-column fxFlex heading="Your Posts" flag="You Participated"></piazza-column>
+    <piazza-column fxFlex heading="Popular Posts" flag="Popular"></piazza-column>
 </div>    
 
 </piazza-full-page>

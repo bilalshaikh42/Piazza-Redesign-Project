@@ -23,7 +23,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ClassComponent } from './class/class.component';
 import { PostComponent } from './post/post.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { ColumnComponent } from './column/column.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { FilterComponent } from './filter/filter.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,10 +39,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     SidebarComponent,
     ClassComponent,
     PostComponent,
+    ColumnComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatDialogModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -51,6 +57,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatCardModule,
     AppRoutingModule,
     MatSlideToggleModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

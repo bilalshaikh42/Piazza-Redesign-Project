@@ -1,0 +1,14 @@
+<mat-card lass="outerCard" >
+    <h2> {{heading}}</h2>
+
+<div *ngFor="let count of counts" class="list">
+    <mat-card class="item" routerLink={{count}}> <mat-card-title>
+        Post # {{count}} Title
+    </mat-card-title> 
+    <mat-card-subtitle> <mat-chip-list>
+        <mat-chip selected="true" color="accent"> {{flag}}</mat-chip>
+    </mat-chip-list> </mat-card-subtitle>
+    <mat-card-content> A preview of Post #{{count}}</mat-card-content>
+</mat-card>
+</div>
+</mat-card>
